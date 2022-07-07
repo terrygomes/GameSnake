@@ -1,7 +1,5 @@
 package Snake.View;
 
-import java.awt.Color;
-
 import Snake.Controle.ControleTelaJogo;
 
 public class TelaJogo extends TelaBase
@@ -34,13 +32,14 @@ public class TelaJogo extends TelaBase
 		add(gamePanel);
 		add(statusPanel);
 
-		gamePanel.setBackground(Color.BLACK);
-		statusPanel.setBackground(Color.ORANGE);
+//		gamePanel.setBackground(Color.BLACK);
+//		statusPanel.setBackground(Color.ORANGE);
 
 		controle = new ControleTelaJogo(this);
 		addKeyListener(controle);
 
 		setVisible(true);
+		controle.inicializar();
 	}
 
 	public GamePanel getGamePanel()
